@@ -1,10 +1,10 @@
 export const quizResolvers = {
   Query: {
-    all: async (
-      _source: any,
+    all: (
+      _source,
       { offset = 0, limit = 9 }: QuizListingProps,
-      { dataSources }: any
-    ) => {
+      { dataSources }
+    ): any => {
       return dataSources.quizApi.allQuizzes({ offset, limit });
     },
     quizzesByTypeOrCategory: async (

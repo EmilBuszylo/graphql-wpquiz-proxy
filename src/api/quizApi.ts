@@ -1,4 +1,4 @@
-const { RESTDataSource } = require('apollo-datasource-rest');
+import { RESTDataSource } from 'apollo-datasource-rest';
 
 export class QuizApi extends RESTDataSource {
   constructor() {
